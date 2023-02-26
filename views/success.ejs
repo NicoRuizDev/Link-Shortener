@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Link Shortener</title>
+</head>
+
+<body>
+    <script>
+        window.history.pushState(null, null, '/shorten');
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        };
+    </script>
+    Successfuly created shortened link: [ <a href="<%= shortUrl %>" target="_blank">
+        <%= shortUrl %>
+    </a>]
+</body>
+
+</html>
